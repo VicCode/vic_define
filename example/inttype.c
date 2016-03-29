@@ -2,7 +2,7 @@
 
 #include <vic/inttype.h>
 
-#define _PRINT_TYPE_(type) printf(#type": %lu\n", sizeof(type))
+#define _PRINT_TYPE_(type) printf(#type ": %" PRIuPTR "\n", sizeof(type))
 
 int main(int argc, char *argv[]) {
     _PRINT_TYPE_(int8_t);
