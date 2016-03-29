@@ -1,7 +1,7 @@
 # vic_define
 
 ## 简介
-`vic_define`是一个跨平台的高性能的协程库（从boost中移植过来的，如果项目引用了boost，也可以直接使用boost中的协程接口）。
+`vic_define`是一个跨平台的基础库，包含一些宏定义和数据类型。
 
 ## 使用说明
 1. 克隆项目。`git clone --recursive https://github.com/VicCode/vic_define.git`
