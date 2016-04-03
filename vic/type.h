@@ -1,8 +1,14 @@
 #pragma once
 
+#include <vic/predef.h>
+
 #include <stdbool.h>
 #include <stddef.h>
 #include <sys/types.h>
+#ifdef _VIC_WINDOWS_
+#else
+#include <errno.h>
+#endif
 
 #include <vic/inttype.h>
 
@@ -50,6 +56,15 @@ typedef fd_t socket_t;
 typedef pid_t tid_t; // Thread ID
 
 //typedef size_t fls_key_t;
+
+#ifdef _VIC_WINDOWS_
+    typedef DWORD error_t;
+#else
+#   ifndef __error_t_defined
+        typedef int32_t error_t;
+#       define __error_t_defined 1
+#   endif
+#endif
 
 #ifdef	__cplusplus
 }

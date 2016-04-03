@@ -24,6 +24,7 @@ int main(int argc, char *argv[]) {
     _PRINT_TYPE_(socket_t);
     _PRINT_TYPE_(pid_t);
     _PRINT_TYPE_(tid_t);
+    _PRINT_TYPE_(error_t);
     return 0;
 }
 
