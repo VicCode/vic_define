@@ -39,7 +39,15 @@ typedef float32_t floatmin_t;
 typedef float96_t floatmax_t;
 
 //using ::size_t;
+#ifdef _VIC_WINDOWS_
+#   ifdef _VIC_IS_64_BITS_
+        typedef long ssize_t;
+#   elif defined(_VIC_IS_32_BITS_)
+        typedef int ssize_t;
+#   endif
+#else
 //using ::ssize_t;
+#endif
 //using ::ptrdiff_t;
 //using ::off_t;
 //using ::time_t;
@@ -53,8 +61,13 @@ typedef int32_t fd_t;
 typedef fd_t socket_t;
 #define vic_invalid_socket vic_invalid_fd
 
-//using ::pid_t; // Process ID
-typedef pid_t tid_t; // Thread ID
+#ifdef _VIC_WINDOWS_
+    typedef unsigned int pid_t;
+    typedef unsigned int tid_t;
+#else
+    //using ::pid_t; // Process ID
+    typedef pid_t tid_t; // Thread ID
+#endif
 
 //typedef size_t fls_key_t;
 

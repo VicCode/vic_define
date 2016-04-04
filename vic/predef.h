@@ -42,26 +42,34 @@ extern "C" {
 #ifdef _MSC_VER
 #   define _VIC_MSVC_
 #   ifdef _M_X64
-#       define _VIC_X86_64_
+#       define _VIC_X64_
+#       define _VIC_IS_64_BITS_
 #   elif defined(_M_IX86)
 #       define _VIC_X86_
+#       define _VIC_IS_32_BITS_
 #   endif
 #endif
 
 #ifdef __GNUC__
 #   define _VIC_GCC_
 #   ifdef __x86_64
-#       define _VIC_X86_64_
+#       define _VIC_X64_
+#       define _VIC_IS_64_BITS_
 #   elif defined(__i386__)
 #       define _VIC_X86_
-#   elif defined(__arm__)
-#       define _VIC_ARM_
+#       define _VIC_IS_32_BITS_
 #   elif defined(__arm64__)
 #       define _VIC_ARM64_
-#   elif defined(__ppc__)
-#       define _VIC_PPC_
+#       define _VIC_IS_64_BITS_
+#   elif defined(__arm__)
+#       define _VIC_ARM_
+#       define _VIC_IS_32_BITS_
 #   elif defined(__ppc64__)
 #       define _VIC_PPC64_
+#       define _VIC_IS_64_BITS_
+#   elif defined(__ppc__)
+#       define _VIC_PPC_
+#       define _VIC_IS_32_BITS_
 #   endif
 #endif
 

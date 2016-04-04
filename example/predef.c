@@ -33,8 +33,8 @@ int main(int argc, char *argv[]) {
 #ifdef _VIC_CLANG_
     printf("_VIC_CLANG_\n");
 #endif
-#ifdef _VIC_X86_64_
-    printf("_VIC_X86_64_\n");
+#ifdef _VIC_X64_
+    printf("_VIC_X64_\n");
 #endif
 #ifdef _VIC_X86_
     printf("_VIC_X86_\n");
