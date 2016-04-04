@@ -33,6 +33,12 @@ int main(int argc, char *argv[]) {
 #ifdef _VIC_CLANG_
     printf("_VIC_CLANG_\n");
 #endif
+#ifdef _VIC_IS_64_BITS_
+    printf("_VIC_IS_64_BITS_\n");
+#endif
+#ifdef _VIC_IS_32_BITS_
+    printf("_VIC_IS_32_BITS_\n");
+#endif
 #ifdef _VIC_X64_
     printf("_VIC_X64_\n");
 #endif
