@@ -39,11 +39,11 @@ int main(int argc, char *argv[]) {
 #ifdef _VIC_IS_32_BITS_
     printf("_VIC_IS_32_BITS_\n");
 #endif
-#ifdef _VIC_X64_
-    printf("_VIC_X64_\n");
+#ifdef _VIC_AMD64_
+    printf("_VIC_AMD64_\n");
 #endif
-#ifdef _VIC_X86_
-    printf("_VIC_X86_\n");
+#ifdef _VIC_I386_
+    printf("_VIC_I386_\n");
 #endif
 #ifdef _VIC_ARM_
     printf("_VIC_ARM_\n");
