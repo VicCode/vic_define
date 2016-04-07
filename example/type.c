@@ -25,9 +25,6 @@ int main(int argc, char *argv[]) {
     _PRINT_TYPE_(pid_t);
     _PRINT_TYPE_(tid_t);
     _PRINT_TYPE_(error_t);
-
-    error_t e = last_error();
-    set_last_error(e);
     return 0;
 }
 

@@ -73,15 +73,11 @@ typedef fd_t socket_t;
 
 #ifdef _VIC_WINDOWS_
     typedef DWORD error_t;
-#   define last_error() GetLastError()
-#   define set_last_error(err) SetLastError(err)
 #else
 #   ifndef __error_t_defined
         typedef int32_t error_t;
 #       define __error_t_defined 1
 #   endif
-#   define last_error() errno
-#   define set_last_error(err) (errno = err)
 #endif
 
 #ifdef	__cplusplus
